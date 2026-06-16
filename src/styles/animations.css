@@ -1,0 +1,69 @@
+/**
+ * Leegality Animation Tokens & Keyframes
+ */
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@keyframes hero-gradient-shift {
+  0%, 100% { background: var(--gradient-hero-a); }
+  50% { background: var(--gradient-hero-b); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* Reusable transition utilities */
+.transition-token {
+  transition-property: color, background-color, border-color, box-shadow, opacity, transform;
+  transition-duration: var(--transition-normal);
+  transition-timing-function: var(--ease-default);
+}
+
+.transition-token-fast {
+  transition-property: color, background-color, border-color, box-shadow, opacity, transform;
+  transition-duration: var(--transition-fast);
+  transition-timing-function: var(--ease-in-out);
+}
+
+.transition-token-slow {
+  transition-property: color, background-color, border-color, box-shadow, opacity, transform;
+  transition-duration: var(--transition-slow);
+  transition-timing-function: var(--ease-default);
+}
+
+.animate-shimmer {
+  animation: shimmer 1.4s var(--ease-in-out) infinite;
+}
+
+.animate-hero-gradient {
+  animation: hero-gradient-shift 12s linear infinite;
+}
+
+.animate-fade-in {
+  animation: fade-in var(--transition-slow) var(--ease-default) forwards;
+}
+
+.animate-slide-up {
+  animation: slide-up var(--transition-slow) var(--ease-default) forwards;
+}

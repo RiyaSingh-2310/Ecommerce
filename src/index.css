@@ -1,0 +1,37 @@
+@import 'tailwindcss';
+@import './styles/variables.css';
+@import './styles/animations.css';
+@import './styles/globals.css';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Tailwind color utilities → design tokens (no self-referential @theme overrides) */
+@theme inline {
+  --font-sans: var(--font-primary);
+
+  --color-primary: var(--color-primary);
+  --color-primary-soft: var(--color-primary-light);
+  --color-secondary: var(--color-secondary);
+  --color-accent: var(--color-accent);
+  --color-accent-soft: var(--color-accent-light);
+  --color-success: var(--color-success);
+  --color-warning: var(--color-warning);
+  --color-warning-soft: var(--color-warning-light);
+  --color-error: var(--color-error);
+  --color-info: var(--color-info);
+  --color-background: var(--color-background);
+  --color-surface: var(--color-surface);
+  --color-surface-elevated: var(--color-surface-elevated);
+  --color-surface-muted: var(--color-surface-secondary);
+  --color-ink: var(--color-text-primary);
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+
+  --shadow-sm: var(--shadow-sm);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-xl: var(--shadow-xl);
+}
